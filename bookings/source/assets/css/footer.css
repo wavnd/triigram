@@ -1,0 +1,62 @@
+.column-footer {
+    float: left;
+    width: 33.33%;
+    padding: 1.25em;
+}
+
+.footer .row-footer {
+    height: auto;
+    width: 100%;
+    background-color: #05386B;
+}
+
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+
+/* Clear floats after the columns */
+.row-footer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 37.5em) {
+    .footer {
+        position: relative;
+    }
+
+    .column-footer {
+        width: 100%;
+    }
+}
+
+.footer p {
+    font-size: 1em;
+}
+
+.footer .row-footer .column-footer .incolumn p {
+    font-size: 1em;
+}
+
+.footer a {
+    text-decoration: underline;
+    font-size: 1.375em;
+    color: white;
+}
+
+.footer-img {
+    max-width: 3.125em;
+    height: auto;
+    width: auto;
+}
+
+.footer p .footer-normal-atag {
+    font-size: 1em;
+}

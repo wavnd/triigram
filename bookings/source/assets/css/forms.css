@@ -1,0 +1,176 @@
+.input-container {
+  display: flex;
+  width: 100%;
+  max-width: 45%;
+  margin: auto;
+  margin-bottom: 0.9375em;
+}
+
+.labels-property {
+  display: inline-block;
+  width: 100%;
+  max-width: 45%;
+  margin: auto;
+  margin-bottom: 0.9375em;
+}
+
+.property-checkbox li {
+  display: inline-block;
+  margin-right: 50%;
+  margin-bottom: 0.9375em;
+}
+
+.section-property {
+  border: 0.625em solid;
+  box-sizing: content-box;
+  border-width: 0.125em;
+  padding-top: 0.3125em;
+  padding-bottom: 0.3125em;
+}
+
+
+
+.icon {
+  padding: 0.9375em;
+  background: #05386B;
+  color: white;
+  min-width: 1.5625em;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.9375em;
+  outline: none;
+
+}
+
+.input-field:focus {
+  border: 0.625em solid #05386B;
+}
+
+.counter-field:focus {
+  border: 0.625em solid #05386B;
+}
+
+.check1:focus {
+  border: 0.625em solid #05386B;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 1.25em;
+}
+
+h2 {
+  text-align: center;
+  padding-top: 1.25em;
+}
+
+.btn {
+  background-color: #05386B;
+  color: white;
+  padding: 0.9375em 1.25em;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  height: 3.125em;
+  opacity: 0.9;
+  max-width: 100%;
+  font-size: 1em;
+  text-align: center;
+  line-height: 1.25em;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.vertical-center {
+  line-height: 1.875em;
+  height: 0.9375em;
+}
+
+.vertical-center .input-container .login-anchor-tag p {
+  font-size: 1em;
+
+}
+
+/********** Counter Styling ***********/
+.counter-field:focus {
+  border: 0.625em solid #05386B;
+}
+
+.counter-field {
+  width: 100%;
+  padding: 0.9375em;
+  outline: none;
+}
+
+/********** Radio Button Styling ***********/
+.radio-container {
+  display: block;
+  position: relative;
+  padding-left:  1.875em;
+  margin-bottom: 0.75em;
+  margin-left: 1.25em;
+
+  cursor: pointer;
+  font-size: 1.375em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.5625em;
+  width: 1.5625em;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radio-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-container input:checked ~ .checkmark {
+  background-color: #05386B;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio-container .checkmark:after {
+  top: 0.5625em;
+  left: 0.5625em;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  background: white;
+}
+
+/********** Radio Button Styling ***********/

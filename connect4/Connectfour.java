@@ -206,7 +206,11 @@ public class Connectfour {
 
 
 	public void display() {
-		
+	
+		for(int i = 1 ; i < 7; i++){
+			System.out.printf(String.format("%3s", i));
+		}
+		System.out.println();	
 		for (int c = 6; c >= 0; c--) {
 			for (int d = 0; d < 6; d++) {
 				if (board[c][d].isEmpty()) {
