@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+          crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="shortcut icon" href="icons8_cupid_target_64_8nG_icon.ico" />
+        <title>Register</title>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/icons8-cupid-target-64.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                Tindi</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                      <a class="nav-item nav-link " href="#">Home <span class="sr-only">(current)</span></a>
+                      <a class="nav-item nav-link " href="#">Profile</a>
+                      <a class="nav-item nav-link " href="#">About</a>
+                      <a class="nav-item nav-link " href="#">FAQ</a>
+                  </div>
+              </div>
+          </nav>
+    </head>
+
+    <body >
+        <br>
+        <h2>Welcome!</h2>
+        <div class="d-flex justify-content-center">
+            <br>
+            <div class="row">
+                <form method="post" onsubmit="return validateRegister();">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <i class="fa fa-user"></i> <label>Name: </label>
+                            <input id="fname" class="form-control" type="text" name="fname" placeholder="First Name" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <i class="fa fa-user"></i> <label>Surname: </label>
+                            <input id="lname" class="form-control" type="text" name="lname" placeholder="Last Name" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <i class="fa fa-envelope"> </i> <label>Email: </label>
+                        <input id="email" class="form-control" type="email" name="email" placeholder="Email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <i class="fa fa-user"> </i> <label>Age: </label>
+                        <input id="age" class="form-control" type="number" name="age" min="0" max="100" placeholder="0" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col">
+                            <i class="fa fa-key"> </i> <label>Password: </label>
+                            <input id="pass" class="form-control" type="password" name="pass" placeholder="Password" required>
+                        </div>
+                        <div class="col">
+                            <i class="fa fa-key"> </i> <label>Confirm Password: </label>
+                            <input id="passconf" class="form-control" type="password" name="passconf" placeholder="Confirm Password" required>
+                        </div>
+                    </div>
+                    <br>
+                    <button type="submit" value="Submit" class="btn btn-primary" onsubmit="validateRegister();">Create Account</button>
+                </form>
+            </div>
+        </div>
+        <script src="assets/js/validate.js"></script>
+        <br>
+    </body>
+
+    <footer class="footer ">
+        <div class="container d-flex justify-content-center">
+            © 2019 Copyright:
+            <a href="https://zaio.io/">Zaio</a>
+        </div>
+    </footer>
+
+</html>
