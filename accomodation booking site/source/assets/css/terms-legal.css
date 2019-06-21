@@ -1,0 +1,37 @@
+html {
+  box-sizing: border-box;
+}
+
+.legal-card {
+    box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.2);
+    max-width: 79.6875em;
+    margin: auto;
+    text-align: center;
+    padding: 0.75em;
+}
+
+.legal-container {
+  padding: 0.75em;
+}
+
+.legal-card::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+@media screen and (max-width: 37.5em){
+  .legal-container {
+    width: 100%;
+    display: block;
+  }
+}
+
+.legal-container::after, .legal-card::after{
+  content: "";
+  clear: both;
+  display: block;
+}

@@ -1,0 +1,77 @@
+html {
+  box-sizing: border-box;
+}
+.profile-picture {
+  border-radius: 75%;
+}
+.pcontainer {
+  box-shadow: 0 0.250em 0.500em 0 rgba(0, 0, 0, 0.2);
+  max-width: 79.688em;
+  margin: auto;
+  text-align: center;
+  padding: 0.750em;
+}
+
+#loader {
+  position: absolute;
+  left: 37%;
+  top: 55%;
+  z-index: 1;
+  margin: -75px 0 0 -75px;
+  border: 16px solid  #379683;
+  border-top: 16px solid #05386B;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+#myDiv {
+  text-align: center;
+}
+
+.pcard {
+  padding: 0.750em;
+}
+.pbio {
+  max-width: 79.375em;
+}
+a {
+  text-decoration: none;
+  color: #05386B;
+  cursor: pointer;
+}
+fieldset {
+  border-color: #05386B;
+}
+.pmain {
+  box-shadow: 0 250em 500em 0 rgba(0, 0, 0, 0.2);
+  max-width: 79.688em;
+  margin: auto;
+  text-align: center;
+  padding: 0.750em;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+@media screen and (max-width: 37.500em) {
+  .pcontainer {
+    width: 100%;
+    display: block;
+  }
+}
+.pcontainer::after, .pcard::after {
+  content: "";
+  clear: both;
+  display: block;
+}
