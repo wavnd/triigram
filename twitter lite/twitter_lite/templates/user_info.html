@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="content-section">
+        <div class="media">
+            <img class="rounded-circle account-img"
+                 src="{{ url_for('static', filename='images/' + user.profile_pic_url) }}">
+            <div class="media-body">
+                <h2 class="account-heading">{{ user.username }}</h2>
+                <h6 class="text-secondary">{{ user.email }}</h6>
+                <p class="text-secondary">{{ user.bio }}</p>
+                {% if is_followed %}
+                    <div><a href="" onclick="unfollow('{{ user.username }}')">unfollow</a></div>
+                {% else %}
+                    <div><a href="" onclick="follow('{{ user.username }}')">follow</a></div>
+                {% endif %}
+            </div>
+        </div>
+
+    </div>
+
+    {% if tweets|length > 0 %}
+        {% for tweet in tweets %}
+
+            <article class="media content-section">
+                <img class="rounded-circle article-img"
+                     src="{{ url_for('static', filename='images/' + user.profile_pic_url) }}">
+                <div class="media-body">
+                    <div class="article-metadata">
+                        <a class="mr-2" href="#">{{ user.username }}</a>
+                        <!--<a class="mr-2" href="#">{{ user.profile_pic_url }}</a> -->
+                        <small class="text-muted">{{ tweet.created_at }}</small>
+                    </div>
+
+                    <p class="article-content">{{ tweet.content|safe }}</p>
+                    {% if not tweet.liked %}
+                        <a href="" onclick="likeTweet('{{ tweet['tweet'][0].uuid }}')">Like</a>
+                    {% else %}
+                        Already liked
+                    {% endif %}
+                    {% if not tweet['tweet'][0].retweeted %}
+                        <a href="" onclick="retweet('{{ tweet['tweet'][0].uuid }}')">Retweet</a>
+                    {% else %}
+                        Already retweeted
+                    {% endif %}
+                </div>
+
+            </article>
+
+        {% endfor %}
+    {% else %}
+
+        <article class="media content-section">
+            <img class="rounded-circle article-img"
+                 src="{{ url_for('static', filename='images/' + user.profile_pic_url) }}">
+            <div class="media-body">
+                <p class="article-content">You have no tweets</p>
+            </div>
+
+        </article>
+    {% endif %}
+
+{% endblock content %}

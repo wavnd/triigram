@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h4 class="account-heading">#{{ tag }}</h4>
+    {% for tweet in tweets %}
+        {% if tweet[1] | length > 0 %}
+            <article class="media content-section">
+                <img class="rounded-circle article-img"
+                     src="{{ url_for('static', filename='images/' + tweet[0][0].profile_pic_url) }}">
+
+                <div class="media-body">
+                    <div class="article-metadata">
+                        <a class="mr-2"
+                           href="{{ url_for('user_info.profile', username=tweet[0][0].username) }}">{{ tweet[0][0].username }}</a>
+
+                        <small class="text-muted">{{ tweet[1][0].created_at }}</small>
+                    </div>
+
+                    <p class="article-content">{{ tweet[1][0].content|safe }}</p>
+                </div>
+                <div>
+                    <a href="" onclick="likeTweet('{{ tweet[1][0].uuid }}')">Like</a>
+                    <a href="" onclick="retweet('{{ tweet[1][0].uuid }}')">Retweet</a>
+                </div>
+            </article>
+        {% else %}
+
+            <article class="media content-section">
+                <h4 class="account-heading">#{{ tag }}</h4>
+                <div class="media-body">
+                    <p class="article-content">You have no tweets</p>
+                </div>
+
+            </article>
+        {% endif %}
+
+    {% endfor %}
+{% endblock content %}
