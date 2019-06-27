@@ -20,10 +20,10 @@
             </button>
             <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                      <a class="nav-item nav-link " href="#">Home <span class="sr-only">(current)</span></a>
-                      <a class="nav-item nav-link " href="#">Profile</a>
-                      <a class="nav-item nav-link " href="#">About</a>
-                      <a class="nav-item nav-link " href="#">FAQ</a>
+                      <a class="nav-item nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                      <a class="nav-item nav-link" href="#">Profile</a>
+                      <a class="nav-item nav-link" href="#">About</a>
+                      <a class="nav-item nav-link" href="#">FAQ</a>
                   </div>
               </div>
           </nav>
@@ -31,11 +31,16 @@
 
     <body >
         <br>
-        <h2>Welcome!</h2>
         <div class="d-flex justify-content-center">
-            <br>
             <div class="row">
                 <form method="post" onsubmit="return validateRegister();">
+                    <div class="form-row">
+                        <img src="assets/img/icons8-cupid-target-64.png" alt="Logo" width="50px;" height="50px;">
+                    </div>
+                    <div class="form-row">
+                        <p>Please enter your information below to create an account.</p>
+                    </div>
+                    <br>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <i class="fa fa-user"></i> <label>Name: </label>
@@ -68,10 +73,18 @@
                         </div>
                     </div>
                     <br>
-                    <button type="submit" value="Submit" class="btn btn-primary" onsubmit="validateRegister();">Create Account</button>
+                    <div class="form-row">
+                        <div class="col">
+                            <button type="submit" value="Submit" class="btn btn-primary" onsubmit="validateRegister();">Create Account</button>
+                        </div>
+                        <div class="col">
+                            <a class="d-flex justify-content-end" href="#"><u>Already have an account?</u></a>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
+
         <script src="assets/js/validate.js"></script>
         <br>
     </body>
@@ -79,7 +92,7 @@
     <footer class="footer ">
         <div class="container d-flex justify-content-center">
             © 2019 Copyright:
-            <a href="https://zaio.io/">Zaio</a>
+            <a href="https://zaio.io/"> Zaio</a>
         </div>
     </footer>
 

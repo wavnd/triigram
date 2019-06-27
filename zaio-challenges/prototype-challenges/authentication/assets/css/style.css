@@ -6,17 +6,10 @@ html {
 h2 {
     text-align: center;
     color: #1a0000;
-    
+
 }
 .nav-link{
     color: white;
-}
-.row {
-    box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.2);
-    max-width: 2000px;
-    margin: auto;
-    display: inline-block;
-    padding: 2.25em;
 }
 
 body{
@@ -42,6 +35,11 @@ body{
     filter: alpha(opacity=10);
 }
 .row{
+    box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.2);
+    max-width: 2000px;
+    margin: auto;
+    display: inline-block;
+    padding: 2.25em;
     background-color: #000000;
     color: grey;
     border: 1px solid black;
@@ -52,4 +50,10 @@ nav {
     background-color: #000000;
     opacity: 1;
     filter: alpha(opacity=10);
+}
+p {
+    margin: auto;
+}
+img {
+    margin: auto;
 }
