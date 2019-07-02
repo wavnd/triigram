@@ -1,0 +1,54 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    background-color: white;
+}
+.container {
+    margin: auto;
+    background-color: white;
+}
+/*colour boxes ---> red, blue and green*/
+#btn-blue, #btn-green, #btn-red {
+    width: 380px;
+    height: 120px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 70px;
+}
+#btn-blue:hover {
+    cursor: pointer;
+}
+#btn-green:hover {
+    cursor: pointer;
+}
+#btn-red:hover {
+    cursor: pointer;
+}
+.col-md {
+    margin-bottom: 50px;
+    margin-right: 20px;
+}
+/*container div for box that will change colour*/
+#text-block {
+    border: 1px solid black;
+    width: 580px;
+    height: 460px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.container {
+    margin-top: 100px;
+}
+/*div with the text (p tags)*/
+.text {
+    margin-right: auto;
+}
+p {
+    font-size: 25px;
+}
