@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+          crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="shortcut icon" href="assets/img/ico.ico">
+        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+        <title>Profile</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <a class="navbar-brand d-flex justify-content-sm-start" href="#">
+                <img src="assets/img/ico.png" alt="Logo" width="50px;"  height="50px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="navbar-nav navbar-right">
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="/profile">Profile</a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout">Logout</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="d-flex justify-content-center">
+            <div class="container">
+                <div class="d-flex justify-content-center">
+                    <div class="card" id="profileedit">
+                        <div class="d-flex justify-content-center">
+                            <div class="row brand-logo mb-3 mt-1">
+                                <img src="assets/img/iconfinder_user-2_430127.svg" alt="Logo" width="90px;"  height="90px;">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <div class="row brand-logo mt-1">
+                                <h4>Edit Information</h4>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <div class="row">
+                                <p id="status"></p>
+                            </div>
+                        </div>
+                        <div class="row w-75">
+                            <form action="/user" id="edit-profile" method="POST" title="Edit Information"
+                                onsubmit="event.preventDefault(); validateFormEdit();">
+                                <div class="input-group-md">
+                                    <div id="namei" class="input-group-prepend mb-3">
+                                        <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                        <input id="name" type="text" name="name" value="" class="form-control" placeholder="First name">
+                                    </div>
+                                </div>
+                                <div class="input-group-md">
+                                    <div id="surnamei" class="input-group-prepend mb-3">
+                                        <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                        <input id="surname" type="text" name="surname" value="" class="form-control" placeholder="Last name">
+                                    </div>
+                                </div>
+                                <div class="input-group-md">
+                                    <div id="agei" class="input-group-prepend mb-3">
+                                        <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                        <input id="age" class="form-control" type="number" name="age" min="0" max="100" placeholder="0">                                    </div>
+                                </div>
+                                <div class="input-group-md">
+                                    <div class="input-group-prepend mb-3">
+                                        <span class="input-group-text"><i class="fa fa-institution icon"></i></span>
+                                        <select id="university" name="university" class="form-control">
+                                            <option value="The University of Cape Town">The University of Cape Town</option>
+                                            <option value="Stellenbosch University">Stellenbosch University</option>
+                                            <option value="University of Pretoria">University of Pretoria</option>
+                                            <option value="University of the Witwatersrand">University of the Witwatersrand</option>
+                                            <option value="University of Kwazulu Natal">University of Kwazulu Natal</option>
+                                            <option value="University of the Western Cape">University of the Western Cape</option>
+                                            <option value="Rhodes University">Rhodes University</option>
+                                            <option value="The University of South Africa">The University of South Africa</option>
+                                            <option value="University of Johannesburg">University of Johannesburg</option>
+                                            <option value="North West University">North West University</option>
+                                            <option value="University of the Free State">University of the Free State</option>
+                                            <option value="Nelson Mandela Metropolitan University">Nelson Mandela Metropolitan University</option>
+                                            <option value="Cape Peninsula University of Technology">Cape Peninsula University of Technology</option>
+                                            <option value="Durban University of Technology">Durban University of Technology</option>
+                                            <option value="University of Zululand">University of Zululand</option>
+                                            <option value="Monash University">Monash University</option>
+                                            <option value="Vaal University of Technology">Vaal University of Technology</option>
+                                            <option value="Central University of Technology">Central University of Technology</option>
+                                            <option value="Walter Sisulu University">Walter Sisulu University</option>
+                                            <option value="University of Limpopo">University of Limpopo</option>
+                                            <option value="Tshwane University of Technology">Tshwane University of Technology</option>
+                                            <option value="University of Fort Hare">University of Fort Hare</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="input-group-md">
+                                    <div class="input-group-prepend mb-3">
+                                        <span class="input-group-text"><i class="fa fa-institution icon"></i></span>
+                                        <select id="faculty" name="faculty" class="form-control">
+                                            <option value="Commerce">Commerce</option>
+                                            <option value="Engineering & the Built Environment">Engineering & the Built Environment</option>
+                                            <option value="Health Sciences">Health Sciences</option>
+                                            <option value="University of the Witwatersrand">Humanities</option>
+                                            <option value="Law">Law</option>
+                                            <option value="Science">Science</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="input-group-md">
+                                    <div id="fcoursei" class="input-group-prepend mb-4">
+                                        <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                        <input id="fcourse" name="fcourse" class="form-control" type="text" placeholder="Favorite Course" value="">
+                                    </div>
+                                </div>
+                                <div class="input-group-md mb-5">
+                                    <button id="edit" class="btn btn-secondary btn-block btn-lg" type="submit" name="button"
+                                        value="edit">Save</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <!-- the footer, simple one -->
+    <footer class="footer">
+        <div class="row d-flex justify-content-center">
+            <span>© 2019 Copyright: </span>
+            <a href="https://zaio.io/"> Zaio</a>
+        </div>
+    </footer>
+    </body>
+    <script type="text/javascript" src="assets/js/ajaxcalls.js"></script>
+    <script type="text/javascript" src="assets/js/validate.js"></script>
+</html>
