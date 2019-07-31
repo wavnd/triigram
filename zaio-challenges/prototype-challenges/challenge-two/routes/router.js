@@ -52,8 +52,16 @@ router.post('/', function (req, res, next) {
             }
         });
 });
+// GET for the userprofile page
+router.get('/profile', function (req, res, next){
+    if((req.session)){
+        return res.send('<body style="background-color: #343148FF;"><div class="row"><h2>Please login!</h2><form action="/"><button class="btn btn-secondary" type="submit">Login</button></form></div></body>');
+    }else{
+        return res.sendFile(path.join(__dirname + '/../templetes/profile.html'));
+    }
+});
 
-// GET for logout logout
+// GET for logout
 router.get('/logout', function (req, res, next) {
     if (req.session) {
         // delete session object

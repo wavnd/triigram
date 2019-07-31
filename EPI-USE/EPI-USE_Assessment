@@ -1,9 +1,0 @@
-#
-#Tue Jul 09 15:52:31 UTC 2019
-Name=EPI-USE_Assessment
-URL=https\://aptitude.cfapps.io/
-ProxyType=Internet
-Type=HTTP
-WebIDEEnabled=true
-Authentication=NoAuthentication
-WebIDEUsage=odata_gen,odata_hcp_odp

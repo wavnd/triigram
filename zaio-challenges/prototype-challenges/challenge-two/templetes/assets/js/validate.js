@@ -90,3 +90,8 @@ function validNameAndSurname(name, surname) {
     const pattern = /^[A-Za-z ]+$/;
     return pattern.test(name) && pattern.test(surname);
 }
+
+
+if (!req.session){
+    $("body").css("color", "#ff0000");
+}
