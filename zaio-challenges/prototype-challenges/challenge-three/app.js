@@ -1,3 +1,6 @@
+// first run sudo service mongod start
+// then node app.js
+
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
