@@ -55,7 +55,7 @@ router.post('/', function (req, res, next) {
                 // return res.redirect("/profile");
                 // console.log(user);
                 // 
-                return res.sendFile(path.join(__dirname + '/../templetes/profile.html'));
+                return res.sendFile(path.join(__dirname + '/../templetes/home.html'));
             }
         });
 });

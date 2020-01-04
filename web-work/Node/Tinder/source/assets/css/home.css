@@ -1,0 +1,23 @@
+html {
+position: relative;
+min-height: 100%;
+}
+
+body {
+background-image: url("../img/Tinder-logo.jpg");
+background-position: center;
+background-size: cover;
+margin: auto;
+}
+
+.row{
+display: inline-block;
+padding: 9px;
+}
+
+.card {
+width: 470px;
+background-color: white;
+margin-top: 12px;
+}
+

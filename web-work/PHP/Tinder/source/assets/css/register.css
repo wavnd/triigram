@@ -1,0 +1,57 @@
+html {
+position: relative;
+min-height: 100%;
+}
+
+body {
+background-image: url("../img/Tinder-logo.jpg");
+background-position: center;
+background-size: cover;
+/* margin-bottom: 70px; */
+margin: auto;
+}
+
+u {
+color: #808080;
+}
+
+.row{
+display: inline-block;
+padding: 9px;
+}
+
+.card {
+width: 470px;
+background-color: white;
+margin-top: 25px;
+}
+
+#social-log {
+width: 400px;
+height: 52px;
+background-color: #3b5998;
+color: white;
+border-radius: 50px;
+font-size: 18px;
+}
+
+#cell-reg, #password-reg, #name-reg {
+border-radius: 4px;
+border: 2px solid #C0C0C0;
+width: 380px;
+height: 40px;
+color: #424242;
+}
+
+#btn-reg {
+background-color: white;
+border-radius: 30px;
+width: 150px;
+border: 2px solid #C0C0C0;
+color: #424242;
+}
+
+#gender {
+    margin-left: 22px;
+    color: #424242;
+}
