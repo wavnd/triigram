@@ -16,8 +16,12 @@ padding: 9px;
 }
 
 .card {
-width: 470px;
+width: 380px;
 background-color: white;
-margin-top: 12px;
+/* margin-top: 12px; */
+margin: auto;
 }
+/* img {
+    margin: auto;
+} */
 
